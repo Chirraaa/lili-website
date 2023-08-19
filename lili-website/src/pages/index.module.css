@@ -270,7 +270,7 @@
   position: relative;
   overflow: hidden;
   background-color: #FBAB7E;
-  background-image: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 10%, rgb(255, 163, 77) 20%, rgb(19, 30, 37) 20%, rgb(19, 30, 37) 66%);
+  background-image: var(--background-header);
   flex-direction: column;
 }
 
