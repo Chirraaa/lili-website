@@ -15,7 +15,7 @@ const data: Question[] = [
         - <b>Low cost </b>of entry. No need to invest in heavy AI processes, give <b>liliFLUX</b> a whirl to see if AI can help in your task. <br />
         - <b>Quick</b> and <b>Easy</b>. No cutsom build setup, no need to hold a phd to get things going. Just install and go! <br />
         - Extremely <b>flexible</b>. We provide many tools to change and customise your prompts to be <b>perfect</b>. No more trial and error with long build steps. Just jump in! <br />
-        - No lock in. All chat history and messages can be <b>easily</b>exported and imported into other tools.
+        - No lock in. All chat history and messages can be <b>easily</b> exported and imported into other tools.
       </>
     ),
   },
