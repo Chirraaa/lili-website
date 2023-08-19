@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import clsx from 'clsx';
 import classNames from 'classnames';
 import Link from '@docusaurus/Link';
@@ -11,6 +11,11 @@ import styles from './index.module.css';
 import Translate, { translate } from '@docusaurus/Translate';
 import { CodeBlocks } from '../theme/Command';
 import SwiperCarousel from '../components/SwiperCarousel';
+import AboutLili from "@site/src/components/about-liliflux";
+import Test from '@site/src/components/test';
+import FAQ from '../components/FAQ';
+import ShowCase from '../components/showcase';
+
 
 
 function HomepageHeader() {
@@ -37,27 +42,35 @@ function HomepageHeader() {
 function Cards() {
   const cards = [
     {
-      label: translate({ message: 'Why liliFLUX and not just ChatGPT?' }),
+      label: translate({ message: 'Instant file access' }),
       description: translate({
-        message: "Simplify your day to day workload with quick content generation relevant to your product."
+        message: "Gives AI the power to directly read, change and work with your files."
       }),
-      imageUrl: ''
+      link: '',
+      isDoc: true,
+      linkText: translate({ message: 'Documentation' }),
+      imageUrl: '/images/card1.png'
     },
     {
-      label: translate({ message: 'Students' }),
+      label: translate({ message: 'Customizable' }),
       description: translate({
-        message: "Access to an AI which can directly assist and create experiments directly on your computers."
+        message: "AI comes with lots of bells and whistles, by default we will hide these. But with one simple click you can access all of the advanced features you need."
       }),
-      imageUrl: ''
+      link: '',
+      isDoc: true,
+      linkText: translate({ message: 'Documentation' }),
+      imageUrl: '/images/card2.png'
     },
     {
-      label: translate({ message: 'Engineers' }),
+      label: translate({ message: 'Chat history editor' }),
       description: translate({
-        message: "Handle code relevant to your real projects. Direct the AI to your existing code and enable it to make changes, document it and much more."
+        message: "Manage the history and edit your chats to create new advanced workloads which you can load with ease."
       }),
-      imageUrl: ''
+      link: '',
+      isDoc: true,
+      linkText: translate({ message: 'Documentation' }),
+      imageUrl: '/img/index/showcase1.png'
     }
-
   ]
 
   const latestVersion = useLatestVersion()
@@ -118,36 +131,29 @@ function DynamicHeaderImage() {
 }
 
 
+
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   const latestVersion = useLatestVersion();
+
   return (
     <Layout
       title={`${siteConfig.title}`}
       description="liliFLUX empowers users with their own data, to work faster.">
       <HomepageHeader />
+      <ShowCase />    
       <main>
+
         <section className="container">
+
           <div className={classNames(styles.row)}>
             <Cards />
           </div>
         </section>
 
+        <AboutLili />
+        <FAQ/>
       </main>
-      <header className={classNames('hero', styles.hero)}>
-
-<div className={classNames(styles.heroContainer)}>
-  <div className={classNames(styles.heroSubtitle, 'hero__subtitle')}>
-    <Translate>
-      liliFLUX empowers users with their own data, to work faster.
-    </Translate>
-  </div>
-  <div className={classNames(styles.commandContainer)}>
-    <CodeBlocks />
-  </div>
-</div>
-
-</header>
     </Layout>
   );
 }

@@ -22,27 +22,27 @@ function CardContainer({ href, children }) {
 
 function CardLayout({ href, icon, title, description, image, imageDark }) {
   return (
-    <CardContainer href={href}>
-      {image && (
-        <div className={styles.cardImage}>
-          <img src={image + (imageDark ? '#gh-light-mode-only' : '')} />
-          {imageDark && <img src={imageDark + '#gh-dark-mode-only'} />}
-        </div>
-      )}
-      <div className={styles.cardColumn}>
-        <h2 className={clsx('text--truncate', styles.cardTitle)} title={title}>
-          {!image ? icon : ''} {title}
-        </h2>
-        {description && (
-          <p
-            className={clsx('text--truncate', styles.cardDescription)}
-            title={description}
-          >
-            {description}
-          </p>
+      <CardContainer href={href}>
+        {image && (
+          <div className={styles.cardImage}>
+            <img src={image + (imageDark ? '#gh-light-mode-only' : '')} />
+            {imageDark && <img src={imageDark + '#gh-dark-mode-only'} />}
+          </div>
         )}
-      </div>
-    </CardContainer>
+        <div className={styles.cardColumn}>
+          <h2 className={clsx('text--truncate', styles.cardTitle)} title={title}>
+            {!image ? icon : ''} {title}
+          </h2>
+          {description && (
+            <p
+              className={clsx('text--truncate', styles.cardDescription)}
+              title={description}
+            >
+              {description}
+            </p>
+          )}
+        </div>
+      </CardContainer>
   )
 }
 
