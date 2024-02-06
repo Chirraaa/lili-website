@@ -1,10 +1,12 @@
 {
+  "homepage": "https://www.chirraaa.github.io/lili-website",
   "name": "lili-website",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "predeploy": "npm run build",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
