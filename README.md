@@ -1,41 +1,37 @@
-# Website
+# LILI Promotional Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This is the promotional website that was created for LILI : [github repo](https://github.com/aJamDonut/lili) , built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+
+> ⚠️ **Note**: This website is currently under development and contains unfixed bugs. The build process may not complete successfully at this time.
 
 ### Installation
 
-```
-$ yarn
+```bash
+$ npm install
 ```
 
 ### Local Development
 
-```
-$ yarn start
+```bash
+$ npm start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 ### Build
 
-```
-$ yarn build
+```bash
+$ npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
 
-Using SSH:
+## Development Status
+This website is currently in active development and may contain:
+- Incomplete sections
+- Unfixed bugs
+- Build process issues
+- Missing content
 
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Please be aware of these limitations when working with this repository.
